@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>The 8's Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<section id="home" class="sub-header">
+    <nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li> 
+            <li><a href="index.html#about">ABOUT US</a></li>
+            <li><a href="index.html#contacts">CONTACTS</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="box-text">
+     <h1>Our Menu</h1>
+     <p>Ready To be Served!</p>
+    </div>
+</section>
+<section id="menu" class="menu">
+    <h1>Hot Beverages and Foods that we offer</h1>
+    <p>Check out our Menu with affordable prices!</p>
+    
+    <div class="best-selling">
+        <h2>Best Selling Items</h2>
+        <div class="item">
+            <img src="images/Coffee.jpg" alt="French Vanilla">
+            <h3>French Vanilla</h3>
+            <p>₱120</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('French Vanilla', -1)">-</button>
+                <span id="qty-French Vanilla">1</span>
+                <button onclick="updateMenuQuantity('French Vanilla', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('French Vanilla', 120, 'images/Coffee.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="images/brownie.jpg" alt="Brownies">
+            <h3>Brownies</h3>
+            <p>₱80</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Brownies', -1)">-</button>
+                <span id="qty-Brownies">1</span>
+                <button onclick="updateMenuQuantity('Brownies', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Brownies', 80, 'images/brownie.jpg')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>Coffee</h2>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/Coffee.jpg" alt="French Vanilla">
+            </div>
+            <h3>French Vanilla</h3>
+            <p>₱120</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('French Vanilla-Coffee', -1)">-</button>
+                <span id="qty-French Vanilla-Coffee">1</span>
+                <button onclick="updateMenuQuantity('French Vanilla-Coffee', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('French Vanilla', 120, 'images/Coffee.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/coffee2.jpg" alt="Espresso">
+            </div>
+            <h3>Espresso</h3>
+            <p>₱100</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Espresso', -1)">-</button>
+                <span id="qty-Espresso">1</span>
+                <button onclick="updateMenuQuantity('Espresso', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Espresso', 100, 'images/coffee2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/coffee3.jpg" alt="Cappuccino">
+            </div>
+            <h3>Cappuccino</h3>
+            <p>₱130</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Cappuccino', -1)">-</button>
+                <span id="qty-Cappuccino">1</span>
+                <button onclick="updateMenuQuantity('Cappuccino', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Cappuccino', 130, 'images/coffee3.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/coffee4.jpg" alt="Americano">
+            </div>
+            <h3>Americano</h3>
+            <p>₱110</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Americano', -1)">-</button>
+                <span id="qty-Americano">1</span>
+                <button onclick="updateMenuQuantity('Americano', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Americano', 110, 'images/coffee4.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>Sweets</h2>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/sweets1.jpg" alt="Chocolate Cake">
+            </div>
+            <h3>Chocolate Cake</h3>
+            <p>₱150</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Chocolate Cake', -1)">-</button>
+                <span id="qty-Chocolate Cake">1</span>
+                <button onclick="updateMenuQuantity('Chocolate Cake', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Chocolate Cake', 150, 'images/sweets1.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/sweets2.jpg" alt="Brownies">
+            </div>
+            <h3>Brownies</h3>
+            <p>₱80</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Brownies-Sweets', -1)">-</button>
+                <span id="qty-Brownies-Sweets">1</span>
+                <button onclick="updateMenuQuantity('Brownies-Sweets', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Brownies', 80, 'images/sweets2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/sweets3.jpg" alt="Glazed Doughnut">
+            </div>
+            <h3>Glazed Doughnut</h3>
+            <p>₱60</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Glazed Doughnut', -1)">-</button>
+                <span id="qty-Glazed Doughnut">1</span>
+                <button onclick="updateMenuQuantity('Glazed Doughnut', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Glazed Doughnut', 60, 'images/sweets3.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/sweets4.jpg" alt="Chocolate Cookie">
+            </div>
+            <h3>Chocolate Cookie</h3>
+            <p>₱50</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Chocolate Cookie', -1)">-</button>
+                <span id="qty-Chocolate Cookie">1</span>
+                <button onclick="updateMenuQuantity('Chocolate Cookie', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Chocolate Cookie', 50, 'images/sweets4.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>Drinks</h2>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/drinks1.jpg" alt="Apple Juice">
+            </div>
+            <h3>Apple Juice</h3>
+            <p>₱90</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Apple Juice', -1)">-</button>
+                <span id="qty-Apple Juice">1</span>
+                <button onclick="updateMenuQuantity('Apple Juice', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Apple Juice', 90, 'images/drinks1.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/drinks2.jpg" alt="Orange Juice">
+            </div>
+            <h3>Orange Juice</h3>
+            <p>₱90</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Orange Juice', -1)">-</button>
+                <span id="qty-Orange Juice">1</span>
+                <button onclick="updateMenuQuantity('Orange Juice', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Orange Juice', 90, 'images/drinks2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/drinks3.jpg" alt="Lemonade">
+            </div>
+            <h3>Lemonade</h3>
+            <p>₱85</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Lemonade', -1)">-</button>
+                <span id="qty-Lemonade">1</span>
+                <button onclick="updateMenuQuantity('Lemonade', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Lemonade', 85, 'images/drinks3.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>Pasta</h2>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/pasta1.jpg" alt="Spaghetti">
+            </div>
+            <h3>Spaghetti</h3>
+            <p>₱180</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Spaghetti', -1)">-</button>
+                <span id="qty-Spaghetti">1</span>
+                <button onclick="updateMenuQuantity('Spaghetti', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Spaghetti', 180, 'images/pasta1.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/pasta2.jpg" alt="Carbonara">
+            </div>
+            <h3>Carbonara</h3>
+            <p>₱200</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Carbonara', -1)">-</button>
+                <span id="qty-Carbonara">1</span>
+                <button onclick="updateMenuQuantity('Carbonara', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Carbonara', 200, 'images/pasta2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="images/pasta3.jpg" alt="Pesto Pasta">
+            </div>
+            <h3>Pesto Pasta</h3>
+            <p>₱190</p>
+            <div class="quantity-selector">
+                <button onclick="updateMenuQuantity('Pesto Pasta', -1)">-</button>
+                <span id="qty-Pesto Pasta">1</span>
+                <button onclick="updateMenuQuantity('Pesto Pasta', 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="addToCartWithQuantity('Pesto Pasta', 190, 'images/pasta3.jpg')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+
+<button class="cart-btn" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span>Cart</span>
+    <span class="cart-count" id="cart-count">0</span>
+</button>
+
+
+<div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <h3>Total:</h3>
+                <span id="cart-total">₱0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="cart-notification" id="cart-notification">
+    Item added to cart!
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
+
